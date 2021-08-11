@@ -3,14 +3,14 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #CCC;
+  background-color: rgb(192, 189, 149);
 }
 .container {
   width: 350px;
   height: calc(100% - 40px);
   padding: 20px;
   border-radius: 20px;
-  background-color: #757575
+  background-color: #080000
 }
 
 .title {
