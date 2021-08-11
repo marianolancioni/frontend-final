@@ -39,7 +39,7 @@ export const logoutUser = () => {
 export const login = (email, password) => {
     return (dispatch) => {
         dispatch(loginFetching());
-        fetch("https://backend-final-2112.herokuapp.com/", {
+        fetch("https://backend-final-2112.herokuapp.com/auth/login", {
                 method: 'post',
                 headers: {
                     'Accept': 'application/json',
