@@ -42,7 +42,7 @@ export const editProducto = (_id, nombre, descripcion, precio) => {
             precio: parseFloat(precio)
         });
         try {
-            await fetch("https://final-mcga-jones.herokuapp.com/productos?id="+_id, {
+            await fetch("https://backend-final-2112.herokuapp.com/productos?id="+_id, {
                 method: 'put',
                 headers: {
                     'Accept': 'application/json',
@@ -69,7 +69,7 @@ export const fetchProductos = () => {
     return async (dispatch) => {
         dispatch(fetchProductosPending());
         try {
-            const response = await fetch("https://final-mcga-jones.herokuapp.com/productos");
+            const response = await fetch("https://backend-final-2112.herokuapp.com/productos");
             const data = await response.json();
             return dispatch(fetchProductosSuccess(data));
         }
@@ -133,7 +133,7 @@ const reducer = (store = initialStore, action) => {
         }
         case 'DEL_PRODUCTO': {
             const productos = [...store.lista]
-            fetch("https://final-mcga-jones.herokuapp.com/productos?id="+action._id, {
+            fetch("https://backend-final-2112.herokuapp.com/productos?id="+action._id, {
                 method: 'delete',
                 headers: {
                     'Accept': 'application/json',
