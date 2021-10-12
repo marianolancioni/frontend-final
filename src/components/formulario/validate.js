@@ -9,9 +9,7 @@ const validate = values => {
     if (!values.precio) {
       errors.precio = 'Requerido!'
     }
-    if (isNaN(values.precio)) {
-      errors.precio = 'Valor no numérico!'
-    }
+   
     return errors
   }
   

@@ -32,12 +32,12 @@ class Formulario extends React.Component {
           <div className={css.container}>
             <section className={css.addSection}>  
               <div className={css.informationSection}>
-                  <span className={css.titleAlumno}>Producto:</span>
+                  <span className={css.titleAlumno}>Requerimiento nuevo:</span>
                   <Field name="_id" className={css.hiddenInput} component="input" type="text" />
                   <Field label="Nombre" name="nombre" component={RenderField} type="text" />
                   <Field label="Descripción" name="descripcion" component={RenderField} type="text" />
                   <Field label="Precio" name="precio" component={RenderField} type="text" />
-                  <button id="saveButton" className={css.buttonSave} onClick={this.saveNewProducto}>Guardar Información</button>
+                  <button id="saveButton" className={css.buttonSave} onClick={this.saveNewProducto}>Generar Requerimiento</button>
               </div>
             </section>
             <button 

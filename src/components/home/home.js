@@ -14,8 +14,8 @@ class Productos extends React.Component {
         <div className={css.container}>
           <button className={css.button} onClick={this.loginLogout}>{this.props.logged ? "Logout" : "Login"}</button>
           <section className={css.listSection}>    
-          {!this.props.isFetchingProductos && !this.props.fail && <span className={css.listTitle}>Lista de Productos:</span>}
-          {this.props.isFetchingProductos && <span className={css.listTitle}>Cargando productos...</span>} 
+          {!this.props.isFetchingProductos && !this.props.fail && <span className={css.listTitle}>Lista de requerimientos:</span>}
+          {this.props.isFetchingProductos && <span className={css.listTitle}>Cargando requerimientos...</span>} 
           {this.props.fail && <span className={css.listTitle}>Error al cargar productos...</span>}
             {
               this.props.productos.map((producto) => {
@@ -23,7 +23,7 @@ class Productos extends React.Component {
               })
             }
           </section>          
-          <button hidden={!this.props.logged} className={css.button} onClick={this.addProducto}>Agregar Producto</button>
+          <button hidden={!this.props.logged} className={css.button} onClick={this.addProducto}>Agregar Requerimiento</button>
         </div>
       </div>
     );
