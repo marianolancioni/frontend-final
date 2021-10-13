@@ -9,7 +9,6 @@ const validate = values => {
     if (!values.precio) {
       errors.precio = 'Requerido!'
     }
-   
     return errors
   }
   
